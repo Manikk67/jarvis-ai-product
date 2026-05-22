@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>JARVIS NEO</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <h1>🤖 JARVIS</h1>
+
+        <p class="status">🟢 ALL SYSTEMS ONLINE</p>
+
+        <button onclick="openManual()">
+            📘 USER MANUAL
+        </button>
+
+        <button onclick="showHistory()">
+            🕘 COMMAND HISTORY
+        </button>
+
+        <button>
+            ⚡ AI STATUS
+        </button>
+
+        <button>
+            🚀 WORKSPACES
+        </button>
+
+        <button>
+            🎤 VOICE MODE
+        </button>
+
+        <div class="quick">
+
+            <h2>⚡ QUICK COMMANDS</h2>
+
+            <ul>
+
+                <li>volume up</li>
+                <li>take screenshot</li>
+                <li>open youtube</li>
+                <li>study workspace</li>
+                <li>lock computer</li>
+                <li>search AI news</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- MAIN -->
+
+    <div class="main">
+
+        <div class="topbar">
+
+            <h1>
+                ⚡ JARVIS NEO AI DASHBOARD
+            </h1>
+
+        </div>
+
+        <!-- AI ORB -->
+
+        <div class="orb-container">
+
+            <div class="orb"></div>
+
+            <p class="orb-text">
+                JARVIS ACTIVE
+            </p>
+
+        </div>
+
+        <!-- CHAT -->
+
+        <div class="chat-box" id="chatBox">
+
+            <div class="bot">
+                🤖 Jarvis: System initialized successfully.
+            </div>
+
+        </div>
+
+        <!-- INPUT -->
+
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="userInput"
+                placeholder="Type command or ask AI..."
+            >
+
+            <button onclick="sendMessage()">
+                🚀 SEND
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- MANUAL MODAL -->
+
+    <div class="modal" id="manualModal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeManual()">
+                ✖
+            </span>
+
+            <h1>
+                📘 JARVIS COMPLETE USER MANUAL
+            </h1>
+
+            <div class="manual-text">
+
+<h2>🚀 OVERVIEW</h2>
+
+<p>
+JARVIS NEO is a futuristic AI desktop assistant
+built using Python + Electron + JavaScript.
+</p>
+
+<p>
+It supports:
+AI chat, automation, PC controls,
+workspace automation, screenshots,
+memory system, reminders, and more.
+</p>
+
+<h2>⚡ ALL COMMANDS (150+ STYLE COLLECTION)</h2>
+
+<p>
+AI:
+what is AI,
+motivate me,
+who are you,
+tell joke,
+teach me python,
+teach me machine learning
+</p>
+
+<p>
+Web:
+search AI news,
+search robotics,
+open youtube,
+search coding roadmap,
+search startup ideas
+</p>
+
+<p>
+Automation:
+study workspace,
+coding workspace,
+take screenshot,
+volume up,
+volume down,
+mute volume,
+lock computer,
+restart computer
+</p>
+
+<p>
+Files:
+find pdf,
+find image,
+find notes,
+open desktop,
+open downloads,
+open pictures
+</p>
+
+<p>
+Memory:
+remember command movie,
+launch spotify,
+remember app chrome
+</p>
+
+<p>
+Notes:
+save note complete assignment,
+show notes
+</p>
+
+<h2>🧠 HOW TO ADD CUSTOM COMMANDS</h2>
+
+<p>
+Step 1:
+Type:
+remember command movie
+</p>
+
+<p>
+Step 2:
+Give action:
+open youtube
+</p>
+
+<p>
+Now typing:
+movie
+</p>
+
+<p>
+Will automatically execute:
+open youtube
+</p>
+
+<h2>🔥 HOW TO USE EFFECTIVELY</h2>
+
+<ul>
+
+<li>Use short commands</li>
+<li>Create workspace routines</li>
+<li>Use memory system daily</li>
+<li>Automate repetitive tasks</li>
+<li>Combine voice + text usage</li>
+<li>Use voice in long distance</li>
+<li>Use text in noisy areas</li>
+
+</ul>
+
+<h2>✅ DO'S</h2>
+
+<ul>
+
+<li>Keep commands short</li>
+<li>Organize files properly</li>
+<li>Use reminders effectively</li>
+<li>Save important notes</li>
+
+</ul>
+
+<h2>❌ DON'TS</h2>
+
+<ul>
+
+<li>Do not spam commands quickly</li>
+<li>Do not delete data folder</li>
+<li>Do not move project folders randomly</li>
+
+</ul>
+
+<h2>🏆 CREDITS</h2>
+
+<p>
+1. ChatGPT
+</p>
+
+<p>
+2. Manikandan K
+</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="renderer.js"></script>
+
+</body>
+
+</html>

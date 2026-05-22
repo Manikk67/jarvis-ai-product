@@ -1,0 +1,16 @@
+# JARVIS AI — Python dependencies
+groq>=0.9.0
+python-dotenv>=1.0.0
+pyttsx3>=2.90
+SpeechRecognition>=3.10.0
+PyAudio>=0.2.14
+customtkinter>=5.2.0
+pyautogui>=0.9.54
+pycaw>=20240210
+comtypes>=1.2.0
+flask>=3.0.0
+flask-cors>=4.0.0
+Pillow>=10.0.0
+
+# Build (optional)
+# pyinstaller>=6.0.0

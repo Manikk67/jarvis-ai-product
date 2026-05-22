@@ -1,0 +1,47 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Environment & secrets
+.env
+.env.local
+*.pem
+credentials.json
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# User data & runtime output
+data/*.json
+screenshots/
+*.log
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Node / Electron (optional experimental UI)
+node_modules/
+
+# Large local assets (icon source)
+jarvis.png
+
+# Compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
