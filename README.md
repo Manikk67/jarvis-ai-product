@@ -78,7 +78,7 @@ JARVIS_AI/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/jarvis-ai.git
+git clone https://github.com/Manikk67/jarvis-ai.git
 cd jarvis-ai
 ```
 
