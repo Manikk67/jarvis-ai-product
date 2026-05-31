@@ -1,0 +1,37 @@
+{
+  "assistant_name": "Jarvis",
+  "user_name": "User",
+  "command_prefixes": ["jarvis", "hey jarvis"],
+  "screenshots_folder": "screenshots",
+  "volume_step": 0.1,
+  "brightness_step": 10,
+  "app_discovery": {
+    "search_locations": [
+      "C:\\Program Files",
+      "C:\\Program Files (x86)",
+      "%LOCALAPPDATA%",
+      "%APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs"
+    ],
+    "known_apps": {
+      "chrome": ["chrome.exe", "Google Chrome"],
+      "cursor": ["Cursor.exe", "cursor.exe"],
+      "python": ["python.exe", "pythonw.exe"],
+      "notepad": ["notepad.exe"],
+      "files": ["explorer.exe"]
+    }
+  },
+  "browser_urls": {
+    "youtube": "https://youtube.com",
+    "chatgpt": "https://chat.openai.com",
+    "gemini": "https://gemini.google.com",
+    "copilot": "https://copilot.microsoft.com",
+    "whatsapp": "https://web.whatsapp.com"
+  },
+  "folder_aliases": {
+    "desktop": ["Desktop", "OneDrive\\Desktop"],
+    "documents": ["Documents", "OneDrive\\Documents"],
+    "downloads": ["Downloads"],
+    "pictures": ["Pictures", "OneDrive\\Pictures"],
+    "videos": ["Videos", "OneDrive\\Videos"]
+  }
+}

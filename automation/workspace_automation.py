@@ -1,82 +1,45 @@
-import os
-import webbrowser
+"""Config-driven workspace launcher."""
+
+import logging
 import time
 
-# ==========================================
-# STUDY WORKSPACE
-# ==========================================
+from core.app_discovery import launch_app, launch_browser_url, launch_folder
+from core.config_loader import load_workspace_config
 
-def start_study_workspace():
+logger = logging.getLogger(__name__)
 
-    # Open Chrome
-    chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 
-    try:
-        os.startfile(chrome_path)
-    except:
-        pass
+def _launch_item(item: dict) -> bool:
+    item_type = item.get("type", "")
+    target = item.get("target", "")
 
-    time.sleep(2)
+    if item_type == "app":
+        return launch_app(target)
+    if item_type == "browser":
+        return launch_browser_url(target)
+    if item_type == "folder":
+        return launch_folder(target)
 
-    # Open YouTube LoFi
-    webbrowser.open(
-        "https://www.youtube.com/results?search_query=lofi+study+music"
-    )
+    logger.warning("Unknown workspace item type: %s", item_type)
+    return False
 
-    time.sleep(1)
 
-    # Open Notepad
-    os.system("start notepad")
+def start_workspace(name: str) -> str:
+    config = load_workspace_config()
+    normalized = name.lower().strip()
 
-    time.sleep(1)
+    if normalized not in config:
+        available = ", ".join(config.keys())
+        return f"Workspace '{name}' not found. Available: {available}"
 
-    # Open Calculator
-    os.system("start calc")
+    workspace = config[normalized]
+    items = workspace.get("items", [])
+    launched = 0
 
-    time.sleep(1)
+    for item in items:
+        if _launch_item(item):
+            launched += 1
+        time.sleep(0.5)
 
-    # Open Desktop Folder
-    desktop_path = os.path.join(
-        os.path.expanduser("~"),
-        "OneDrive",
-        "Desktop"
-    )
-
-    try:
-        os.startfile(desktop_path)
-    except:
-        pass
-
-# ==========================================
-# CODING WORKSPACE
-# ==========================================
-
-def start_coding_workspace():
-
-    # Open Chrome
-    chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
-
-    try:
-        os.startfile(chrome_path)
-    except:
-        pass
-
-    time.sleep(2)
-
-    # Open GitHub
-    webbrowser.open("https://github.com")
-
-    time.sleep(1)
-
-    # Open StackOverflow
-    webbrowser.open("https://stackoverflow.com")
-
-    time.sleep(1)
-
-    # Open Notepad
-    os.system("start notepad")
-
-    time.sleep(1)
-
-    # Open Calculator
-    os.system("start calc")
+    description = workspace.get("description", normalized)
+    return f"Started '{normalized}' workspace ({launched}/{len(items)} items). {description}"

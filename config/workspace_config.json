@@ -1,0 +1,22 @@
+{
+  "study workspace": {
+    "description": "Focus mode — documents, browser, AI, notepad",
+    "items": [
+      {"type": "folder", "target": "documents"},
+      {"type": "app", "target": "chrome"},
+      {"type": "browser", "target": "chatgpt"},
+      {"type": "app", "target": "notepad"}
+    ]
+  },
+  "work workspace": {
+    "description": "Daily work — browser, AI tools, messaging, files",
+    "items": [
+      {"type": "app", "target": "chrome"},
+      {"type": "browser", "target": "chatgpt"},
+      {"type": "browser", "target": "gemini"},
+      {"type": "browser", "target": "whatsapp"},
+      {"type": "app", "target": "files"},
+      {"type": "app", "target": "notepad"}
+    ]
+  }
+}

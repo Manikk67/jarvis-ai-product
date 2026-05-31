@@ -21,8 +21,16 @@ build/
 dist/
 *.spec
 
-# User data & runtime output
-data/*.json
+# Testing / PDF generation
+.pytest_cache/
+pytest-cache-files-*/
+
+# Legacy runtime data (do not commit)
+data/commands.json
+data/history.json
+data/memory.json
+data/notes.json
+logs/
 screenshots/
 *.log
 
