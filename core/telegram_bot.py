@@ -136,9 +136,12 @@ def run_bot() -> None:
 
     start_reminder_system(on_trigger=_reminder_notify)
 
+    # Disable PTB's built-in JobQueue — JARVIS uses automation/reminder_system.py.
+    # Avoids APScheduler + tzlocal/pytz conflict on Windows (TypeError at startup).
     app = (
         Application.builder()
         .token(config.TELEGRAM_BOT_TOKEN)
+        .job_queue(None)
         .build()
     )
 
